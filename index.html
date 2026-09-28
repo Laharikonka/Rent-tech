@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RentWave — Rent Tech, Skip the Clutter</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#">⚡ Rent<span>Wave</span></a>
+  <input id="search" type="search" placeholder="Search cameras, drones, consoles…" aria-label="Search">
+  <button id="themeBtn" class="icon-btn" title="Toggle theme">🌙</button>
+  <button id="cartBtn" class="icon-btn" title="Cart">🛒<b id="cartCount">0</b></button>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Use it. Love it. Return it.</h1>
+    <p>Premium electronics by the day. Longer rentals unlock bigger discounts, and half your rent counts toward buying.</p>
+  </div>
+  <div class="eco">
+    <span>🌱 Your e-waste impact</span>
+    <strong id="ecoNum">0</strong><small>kg CO₂ avoided by renting</small>
+  </div>
+</section>
+
+<section class="controls">
+  <div id="chips" class="chips"></div>
+  <select id="sort" aria-label="Sort">
+    <option value="featured">Featured</option>
+    <option value="low">Price: low → high</option>
+    <option value="high">Price: high → low</option>
+    <option value="eco">Most eco-friendly</option>
+  </select>
+</section>
+
+<main id="grid" class="grid"></main>
+
+<div id="modal" class="modal hidden"><div class="modal-box" id="modalBox"></div></div>
+
+<aside id="drawer" class="drawer">
+  <div class="drawer-head"><h2>Your Cart</h2><button id="closeCart" class="icon-btn">✕</button></div>
+  <div id="cartBody"></div>
+</aside>
+<div id="toast" class="toast"></div>
+
+<script src="data.js"></script>
+<script src="cart.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
